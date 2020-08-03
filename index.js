@@ -14,7 +14,8 @@ io.on("connection", (socket) => {
   socket.on("katarina", () => {
     exec("git pull", (err, stdout, stderr) => {
       if (err) {
-        // node couldn't execute the command
+        console.log(err)
+        console.log("nothing to pull uwu")
         return
       }
 
