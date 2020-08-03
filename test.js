@@ -1,11 +1,5 @@
-const { exec } = require("child_process")
-exec("git pull", (err, stdout, stderr) => {
-  if (err) {
-    // node couldn't execute the command
-    return
-  }
+const io = require("socket.io-client")
 
-  // the *entire* stdout and stderr (buffered)
-  console.log(`stdout: ${stdout}`)
-  console.log(`stderr: ${stderr}`)
-})
+const socket = io("http://localhost:3000")
+
+socket.emit("katarina")
