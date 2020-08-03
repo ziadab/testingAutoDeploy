@@ -27,6 +27,7 @@ io.on("connection", (socket) => {
 
 // yes siiiir
 // let's add this line from browser for KATARINA !!
+// an other one
 
 http.listen(3000, () => {
   console.log("listening on *:3000")
